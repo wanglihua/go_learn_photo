@@ -2,6 +2,7 @@ package learn_type
 
 import (
 	"fmt"
+	"reflect"
 	"testing"
 )
 
@@ -37,6 +38,12 @@ func TestType2(t *testing.T) {
 	var a = x.(string)
 	fmt.Println(a)
 
-	var b = x.(int) // panic
-	fmt.Println(b)
+	//var b = x.(int) // panic
+	//fmt.Println(b)
+}
+
+func TestType3(t *testing.T) {
+	var x int = 10
+	x_type := reflect.TypeOf(x)
+	fmt.Println(x_type.Name())
 }
